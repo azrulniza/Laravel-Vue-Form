@@ -153,20 +153,9 @@ const menuItems = [
                         <template #body="{ data }">
                             <div class="flex justify-content-center">
                                 <Button icon="pi pi-pencil" class="mr-2" severity="primary" v-tooltip.top="'edit'" @click="BtnUserEdit(data)" rounded raised />
-                                <Dialog v-model:visible="BtnUserRoleEdit" modal header="Edit User Role" class="col-6 md:col-4" style="border-radius: 35px; border: 3px solid gray; padding: 1.5rem">
-                                    <div class="flex flex-column gap-3 mb-3">
-                                        <label for="DfUserRoleEdit" class="font-semibold w-6rem">User Role</label>
-                                        <InputText v-model="editUserRole" id="DfUserRoleEdit" class="flex-auto" autocomplete="off" />
-                                        <small v-if="editUserRoleError" class="p-error">User Role is required!</small>
-                                    </div>
-                                    <div class="flex justify-content-end gap-2">
-                                        <Button type="button" label="Cancel" severity="secondary" @click="BtnUserRoleEdit = false" raised></Button>
-                                        <Button type="button" label="Save" @click="BtnUserRoleEditSave" raised></Button>
-                                    </div>
-                                </Dialog>
+
                                 <Toast />
                                 <ConfirmPopup></ConfirmPopup>
-                                <!-- <Button @click="BtnUserRoleDelete($event, data)" icon="pi pi-trash" severity="danger" v-tooltip.top="'delete'" rounded raised></Button> -->
                                 <Button
                                     @click="(event) => BtnUserDelete(data, event)"
                                     :icon="data.active ? 'pi pi-times' : 'pi pi-refresh'"
