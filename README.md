@@ -16,9 +16,11 @@ Template : Sakai Vue (4.1.0) https://github.com/primefaces/sakai-vue
 
 Step:
 
-➜ update .env file, change DB info
+➜ create a DB at local machine.
+➜ rename .env_example to .env, change DB info that has been created at step above.
 
 ➜ cd be
+➜ composer install
 ➜ php artisan migrate
 ➜ php artisan serve
 
