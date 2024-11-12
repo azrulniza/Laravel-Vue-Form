@@ -6,7 +6,8 @@
         "build": "vite build",
         "preview": "vite preview",
         "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-        "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+        "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+        "sass:build": "sass --silence-deprecation=slash-div src/assets/styles.scss src/assets/styles.css"
     },
     "dependencies": {
         "@fullcalendar/core": "^6.1.14",
@@ -18,7 +19,7 @@
         "chart.js": "3.3.2",
         "pinia": "^2.1.7",
         "primeflex": "^3.3.1",
-        "primeicons": "^6.0.1",
+        "primeicons": "^7.0.0",
         "primevue": "^3.52.0",
         "vue": "^3.2.41",
         "vue-router": "^4.1.5"
@@ -32,7 +33,9 @@
         "eslint-plugin-vue": "^9.3.0",
         "prettier": "^2.7.1",
         "prettier-plugin-vue": "^1.1.6",
-        "sass": "^1.55.0",
-        "vite": "^4.5.3"
+        "sass": "^1.80.6",
+        "sass-loader": "^16.0.3",
+        "vite": "^5.4.11",
+        "vite-plugin-sass": "^0.1.0"
     }
 }
